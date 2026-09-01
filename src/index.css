@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-fg: var(--color-primary-fg);
+  --color-surface: var(--color-surface);
+  --color-surface-fg: var(--color-surface-fg);
+  --color-background: var(--color-background);
+  --color-background-fg: var(--color-background-fg);
+}
+
+@layer base {
+  :root {
+    --color-primary: #18181b; /* zinc-900 */
+    --color-primary-fg: #ffffff;
+    --color-surface: #f4f4f5; /* zinc-100 */
+    --color-surface-fg: #18181b;
+    --color-background: #ffffff;
+    --color-background-fg: #18181b;
+  }
+
+  .theme-slate {
+    --color-primary: #0f172a;
+    --color-surface: #f1f5f9;
+  }
+  
+  .theme-red {
+    --color-primary: #7f1d1d;
+    --color-surface: #fef2f2;
+  }
+
+  .theme-blue {
+    --color-primary: #1e3a8a;
+    --color-surface: #eff6ff;
+  }
+  
+  .theme-green {
+    --color-primary: #14532d;
+    --color-surface: #f0fdf4;
+  }
+  
+  .theme-orange {
+    --color-primary: #7c2d12;
+    --color-surface: #fff7ed;
+  }
+  
+  .theme-purple {
+    --color-primary: #581c87;
+    --color-surface: #faf5ff;
+  }
+
+  .theme-stone {
+    --color-primary: #1c1917;
+    --color-surface: #f5f5f4;
+  }
+
+  .theme-teal {
+    --color-primary: #134e4a;
+    --color-surface: #f0fdfa;
+  }
+
+  .theme-rose {
+    --color-primary: #881337;
+    --color-surface: #fff1f2;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-background-fg);
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "project_id": "gen-lang-client-0151543125",
+  "database_id": "ai-studio-053c26a6-5b5a-445c-a460-3806da22a2e9",
+  "schemas": {
+    "products": {
+      "type": "document",
+      "fields": {
+        "title": "string",
+        "description": "string",
+        "price": "number",
+        "imageUrl": "string",
+        "fileUrl": "string",
+        "active": "boolean",
+        "createdAt": "timestamp"
+      }
+    },
+    "settings": {
+      "type": "document",
+      "fields": {
+        "theme": "string",
+        "aboutText": "string",
+        "adminEmail": "string"
+      }
+    },
+    "orders": {
+      "type": "document",
+      "fields": {
+        "customerEmail": "string",
+        "cashAppTag": "string",
+        "productId": "string",
+        "status": "string",
+        "createdAt": "timestamp"
+      }
+    }
+  },
+  "rules": [
+    {
+      "collection": "products",
+      "read": "true",
+      "write": "request.auth != null"
+    },
+    {
+      "collection": "settings",
+      "read": "true",
+      "write": "request.auth != null"
+    },
+    {
+      "collection": "orders",
+      "read": "request.auth != null",
+      "write": "true"
+    }
+  ]
+}
